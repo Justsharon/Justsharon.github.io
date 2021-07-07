@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSS Example</title>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,100&display=swap');
+	* {
+		box-sizing: border-box;
+	}
+	/*element selector*/
+	body {
+		font-family: 'Poppins', sans-serif;
+	}
+
+	/*class selector*/
+	.header {
+		background-color: #f1f1f1;
+		padding: 20px;
+		margin-bottom: 10px;
+		text-align: center;
+		font-size: 35px;
+	}
+	.row{
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+	.column{
+		margin: 15px;
+	}
+	.img{
+		height: 50vh;
+		width: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	@media (max-width: 720px) {
+		.row {
+			display: grid;
+			grid-template-columns: auto;
+		}
+		.column {
+			width: 100%;
+			margin: 10px;
+		}
+	}
+
+	</style>
+</head>
+<body>
+<h2>CSS Example using Grid System</h2>
+<p>In this example, we are going to have a simple header and three equal columns.</p>
+<p>On smaller screens, the columns will stack on top of each other. Resize the browser window to see the responsive effect</p>
+
+<div class="header">
+	<h2>Nature</h2>
+</div>
+
+<div class="row">
+	<div class="column">
+		<div class="img" style="background-image: url('img/img/1.1.jpg');"></div>
+		<br>
+		<h3>Title text</h3>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+	</div>
+	<div class="column">
+		<div class="img" style="background-image: url('img/img/2.jpg');"></div>
+		<br>
+		<h3>Title text</h3>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+	</div>
+	<div class="column">
+		<div class="img" style="background-image: url('img/img/3.jpg');"></div>
+		<br>
+		<h3>Title text</h3>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+	</div>	
+</div>
+
+</body>
+</html>
